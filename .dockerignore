@@ -1,0 +1,21 @@
+venv/
+
+# Python кэш
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+docker-compose.*.yml
+
+# IDE
+.vscode/
+.idea/
+*.log
