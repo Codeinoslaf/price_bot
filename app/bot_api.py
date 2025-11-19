@@ -30,7 +30,10 @@ async def monitor():
                 print(f"[{time.strftime('%H:%M:%S')}] Нет данных")
             elif mcap != last_mcap:
                 await send_mcap(bot, mcap)
-                print(f"[{time.strftime('%H:%M:%S')}] Отправлено: {mcap:,.2f} тыс. $")
+                if mcap > 800:
+                    print(f"[{time.strftime('%H:%M:%S')}] Отправлено: {mcap:,.2f} млн. $")
+                else:
+                    print(f"[{time.strftime('%H:%M:%S')}] Отправлено: {mcap:,.2f} тыс. $")
                 last_mcap = mcap
             else:
                 print(f"[{time.strftime('%H:%M:%S')}] Без изменений: {mcap:,.2f} тыс. $")
