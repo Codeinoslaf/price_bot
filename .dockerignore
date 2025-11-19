@@ -1,21 +1,8 @@
+.env
 venv/
-
-# Python кэш
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Git
-.git
-.gitignore
-
-# Docker
-Dockerfile
-docker-compose.yml
-docker-compose.*.yml
-
-# IDE
+Dockerfile~
+docker-compose.override.yml
+.cache/
 .vscode/
 .idea/
-*.log
