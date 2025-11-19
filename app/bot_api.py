@@ -15,10 +15,10 @@ INTERVAL = 15
 
 async def send_mcap(bot: Bot, value: float):
     if value > 800:
-        text = f"<b>MCAP:</b> $ {value:,.2f} тыс. "
+        text = f"<b>MCAP:</b> {value:,.2f} тыс. $"
     else:
-        text = (f"<b>MCAP:</b> $ {value:,.2f} млн. "
-                f"")
+        text = f"<b>MCAP:</b> {value:,.2f} млн. $"
+
     await bot.send_message(chat_id=CHAT_ID, text=text, parse_mode="HTML")
 
 
