@@ -36,7 +36,7 @@ def get_mcap_number() -> int | None:
     return None
 
 
-async def send_mcap(bot: Bot, value: int, last_mcap):
+async def send_mcap(bot: Bot, value: int, last_mcap: int):
     if value > last_mcap:
         text = '🟢📈'
     elif value < last_mcap:
@@ -52,7 +52,7 @@ async def send_mcap(bot: Bot, value: int, last_mcap):
 
 async def monitor():
     bot = Bot(token=BOT_TOKEN)
-    last_mcap = None
+    last_mcap = 0
 
     print("Бот запущен. Мониторинг MCAP...")
 
