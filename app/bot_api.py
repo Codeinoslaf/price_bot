@@ -43,9 +43,9 @@ async def send_mcap(bot: Bot, value: int, last_mcap: int):
         text = '🔴📉'
 
     if value >= 1_000_000:
-        text += f"<b>MCAP:</b> {value // 1_000:,} млн. $"
+        text += f"<b>MCAP:</b> ${value / 1_000_000:.3f}".rstrip('0').rstrip('.') + "M"
     else:
-        text += f"<b>MCAP:</b> {value // 1_000:,} тыс. $"
+        text += f"<b>MCAP:</b> ${value / 1_000:.3f}".rstrip('0').rstrip('.') + " K"
 
     await bot.send_message(chat_id=CHAT_ID, text=text, parse_mode="HTML")
 
