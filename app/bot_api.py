@@ -42,7 +42,7 @@ async def send_mcap(bot: Bot, value: int, last_mcap: int):
     elif value < last_mcap:
         text = '🔴📉'
 
-    if value % 1_000_000 >= 1:
+    if value >= 1_000_000:
         text += f"<b>MCAP:</b> {value // 1_000:,} млн. $"
     else:
         text += f"<b>MCAP:</b> {value // 1_000:,} тыс. $"
